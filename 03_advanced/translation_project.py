@@ -15,6 +15,7 @@ class BioMolecule(object):
         self.name = name
         self.mass = mass
 
+<<<<<<< HEAD
     @property
     def id(self):
         return self._id
@@ -45,6 +46,8 @@ class BioMolecule(object):
         	raise TypeError("Mass must be an Interger")
         self._mass = value
 
+=======
+>>>>>>> upstream/master
     # 1. Write setter and getter methods for all attributes.
     #    Use @property decorators as dicussed in the lecture
     # 2. In the setter methods check for the type of each attribute.
@@ -60,6 +63,7 @@ class Polymer(BioMolecule):
     @type mass: float
     """
     def __init__(self, id, name, sequence, mass=None):
+<<<<<<< HEAD
     	super(Polymer, self).__init__(id, name, mass)
         # 3. Initialize the parent class correctly
         self._sequence = sequence
@@ -77,6 +81,11 @@ class Polymer(BioMolecule):
 
         
 
+=======
+        # 3. Initialize the parent class correctly
+        self._sequence = sequence
+
+>>>>>>> upstream/master
     
     # 4. Write getter and setter for sequence, again check for type
     # 5. run in ipython, instantiate this class, and test it
@@ -96,12 +105,16 @@ class Polymer(BioMolecule):
 
 class MRNA(Polymer):
     def __init__(self, id, name, sequence, mass=None):
+<<<<<<< HEAD
     	super(MRNA, self).__init__(id, name, sequence, mass)
     	
+=======
+>>>>>>> upstream/master
         # 6. Initialize the parent class correctly
 
         # 7. Create a list that stores if a ribosome is bound for each
         # codon (triplet).
+<<<<<<< HEAD
         self.binding = [False] * (len(self.sequence)/3) # use this attribute for 7.
 
     def calculate_mass(self):
@@ -110,6 +123,12 @@ class MRNA(Polymer):
 			self.mass += NA_mass[nt]
         print dictionary
 
+=======
+        self.binding = [] # use this attribute for 7.
+
+    def calculate_mass(self):
+        NA_mass = {'A': 1.0, 'U': 2.2, 'G':2.1, 'C':1.3}
+>>>>>>> upstream/master
         # 8. calculate the mass for the whole sequence
 
 class Protein(Polymer):
