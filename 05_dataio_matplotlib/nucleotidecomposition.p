@@ -1,0 +1,14 @@
+ccollections
+Counter
+p1
+((dp2
+S'A'
+I324
+sS'C'
+I240
+sS'T'
+I336
+sS'G'
+I276
+stRp3
+.
